@@ -1,0 +1,65 @@
+# Diamonds Drill Clothing
+
+> Expérience minière — Quebec-inspired mining streetwear from the drift.
+
+Diamonds Drill Clothing (site in Quebec French: Diamonds Drill Clothing,
+« Expérience minière ») is a mining streetwear brand from Quebec built around
+underground trade culture. It is made for the people at the working face:
+drillers (foreurs), muckers (muckeurs) and the whole underground gang — in the
+brand's own words, « toute la gang du fond », the whole gang from down below.
+The voice is working-crew pride, rock-solid, light Quebec French humour.
+The flagship slogan is « Quand elle résiste, nous on insiste ! » —
+"When it resists, we insist!" As the brand puts it: it's not a slogan,
+it's a work shift.
+
+## The interactive mine experience
+
+The homepage is not a classic storefront. It renders a full-screen HTML canvas
+mini-game — "Descendre dans la mine" (descend into the mine). The visitor
+drills ore veins — four of them: Quartz (Les essentiels), Diamant (Collection
+Foreur, the flagship), Or (Éditions limitées) and Équipe (Entreprise /
+Équipes) — and each unlocked vein opens a collection, announced as « Filon
+débloqué » ("Filon unlocked"). The drill rule is spelled out on site:
+« 3 forages ou 10 secondes — le premier gagne » ("3 drills or 10 seconds —
+first one wins"). The brand values displayed underground are Force,
+Précision, Passion, Résultats. Experience copy on the site is in Quebec
+French.
+
+## The collection
+
+Five designs, each cut in two ways: black T-shirt (T-shirt noir) or black
+hoodie (Hoodie noir). Product format is always the same: a small logo on the
+heart side in front, a medium visual on the back — toujours ("always").
+
+- **Diamonds Drill — Flagship.** The manifesto piece. « Quand elle résiste,
+  nous on insiste ! » / "When it resists, we insist!" For those who actually
+  know the rock — for drillers, muckers, the whole underground crew. It is
+  not a slogan, it's a work shift.
+- **Muckeurs — Rose** (Muckers — Pink). For the women of the underground —
+  the ones running the scoop on 12-hour shifts. Pink is not a concession;
+  it's a flag.
+- **Muckeurs — Jaune** (Muckers — Yellow). For the mucking crew: cleaning
+  the face, loading, moving the mine forward one bucket at a time. No
+  muckers, no mine.
+- **Conventional Mining.** The conventional cycle spelled out: muck, drill,
+  blast — repeat. For the jackleg and drift crews who live every step of
+  the cycle, shift after shift.
+- **Surface Drilling** (FR name on site: Forage de surface). Surface diamond
+  drilling: the rig, the crew, the terrain. For teams that mount the rigs
+  in the mosquitoes and still deliver — field people, not office people.
+
+## Shop status
+
+- Personalization: your name on the heart side, +8 CAD.
+- Prices: coming soon (« bientôt disponible »).
+- Payment: Stripe checkout will be activated once the client's Stripe account
+  is open.
+- Product format: heart-position small logo front, medium visual on the
+  back — always; black tee/black hoodie.
+
+## Contact
+
+- Email: [EMAIL]
+- Phone: [PHONE]
+
+Canonical URL: https://cotcollective.github.io/diamondsdrillclothing/

@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+<meta name="description" content="Du vêtement pour la gang du fond : tees et hoodies noirs, cinq designs issus de la mine, petit logo côté cœur devant, visuel au dos. Expérience minière interactive + boutique en ligne — prix à venir." />
+<meta name="author" content="Diamonds Drill Clothing" />
+<meta name="theme-color" content="#090a0a" />
+<link rel="canonical" href="https://cotcollective.github.io/diamondsdrillclothing/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diamonds Drill Clothing" />
+<meta property="og:title" content="DIAMONDS DRILL CLOTHING — Expérience minière" />
+<meta property="og:description" content="Du vêtement pour la gang du fond : tees et hoodies noirs, cinq designs issus de la mine, petit logo côté cœur devant, visuel au dos. Expérience minière interactive + boutique en ligne — prix à venir." />
+<meta property="og:url" content="https://cotcollective.github.io/diamondsdrillclothing/" />
+<meta property="og:image" content="https://cotcollective.github.io/diamondsdrillclothing/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Cinq designs Diamonds Drill Clothing sur fond sombre" />
+<meta property="og:locale" content="fr_CA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="DIAMONDS DRILL CLOTHING — Expérience minière" />
+<meta name="twitter:description" content="Du vêtement pour la gang du fond : tees et hoodies noirs, cinq designs issus de la mine, petit logo côté cœur devant, visuel au dos. Expérience minière interactive + boutique en ligne — prix à venir." />
+<meta name="twitter:image" content="https://cotcollective.github.io/diamondsdrillclothing/og-image.jpg" />
+<link rel="icon" href="favicon.ico" sizes="48x48" />
+<link rel="icon" href="apple-touch-icon.png" sizes="180x180" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  
+  <title>DIAMONDS DRILL CLOTHING — Expérience minière</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      color-scheme:light dark;
+      --ink:#090a0a;--coal:#111211;--rock:#24251f;--cream:#f1eee4;--muted:#b8b4a8;
+      --gold:#f5bf19;--gold2:#ffe36a;--magenta:#f14591;--line:rgba(245,191,25,.25);
+      --panel:rgba(9,10,10,.88);--shadow:0 24px 80px rgba(0,0,0,.55);
+    }
+    @media (prefers-color-scheme:light){
+      :root{--ink:#0b0b0a;--coal:#171815;--rock:#2b2c25;--cream:#fffaf0;--muted:#d0cabd;--panel:rgba(14,14,12,.91)}
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:var(--ink);color:var(--cream);font-family:"Barlow Condensed",Impact,sans-serif;overflow-x:hidden}
+    button{font:inherit}
+    .experience{position:relative;min-height:100svh;overflow:hidden;background:#0b0c0b}
+    #mineCanvas{position:absolute;inset:0;width:100%;height:100%;display:block;transition:filter 900ms ease,transform 1.2s cubic-bezier(.2,.8,.2,1)}
+    .grain{position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");mix-blend-mode:soft-light}
+    .section-nav{position:absolute;z-index:20;top:max(10px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);display:flex;align-items:stretch;max-width:calc(100% - 24px);background:rgba(5,6,5,.88);border-bottom:3px solid var(--gold);box-shadow:0 12px 28px rgba(0,0,0,.34)}
+    .section-nav button{border:0;border-right:1px solid rgba(255,255,255,.14);background:transparent;color:var(--cream);padding:10px 14px 9px;min-height:42px;cursor:pointer;text-transform:uppercase;font-weight:800;letter-spacing:.08em;font-size:12px;white-space:nowrap}
+    .section-nav button:last-child{border-right:0}.section-nav button:hover,.section-nav button:focus-visible{background:var(--gold);color:#111;outline:none}.section-nav button[aria-current="page"]{background:var(--gold);color:#111}
+    .section-nav .lang-toggle,.section-nav .sound-toggle,.section-nav .music-toggle{color:var(--gold2);min-width:58px;letter-spacing:.04em;background:rgba(255,255,255,.06)}
+    .section-nav .sound-toggle,.section-nav .music-toggle{min-width:52px;color:var(--cream)}
+    .section-nav .sound-toggle[aria-pressed="false"],.section-nav .music-toggle[aria-pressed="false"]{color:#8c8b84;text-decoration:line-through}
+    .section-nav .lang-toggle:hover,.section-nav .lang-toggle:focus-visible,.section-nav .sound-toggle:hover,.section-nav .sound-toggle:focus-visible,.section-nav .music-toggle:hover,.section-nav .music-toggle:focus-visible{background:var(--cream);color:#111}
+
+    /* Entrance */
+    .landing{position:absolute;inset:0;z-index:3;display:grid;place-items:center;text-align:center;padding:clamp(24px,5vw,70px);transition:opacity .65s ease,transform .9s ease,visibility .65s}
+    .landing::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.05) 36%,rgba(0,0,0,.72));pointer-events:none}
+    .landing-inner{position:relative;z-index:1;width:min(760px,100%);transform:translateY(9vh)}
+    .landing-inner>*{opacity:0;animation:surfaceReveal .8s cubic-bezier(.18,.8,.24,1) forwards}.helmet-mark{animation-delay:.25s!important}.brand{animation-delay:.48s!important}.tagline{animation-delay:.75s!important}.enter{animation-delay:1.02s!important}
+    @keyframes surfaceReveal{from{opacity:0;filter:blur(8px)}to{opacity:1;filter:blur(0)}}
+    .helmet-mark{width:58px;height:58px;margin:0 auto 12px;color:var(--gold);filter:drop-shadow(0 4px 14px #000)}
+    .brand{margin:0;text-transform:uppercase;line-height:.78;letter-spacing:-.04em;font-family:"Alfa Slab One",Rockwell,serif;font-size:clamp(52px,10vw,118px);text-shadow:0 6px 0 #000,0 9px 22px rgba(0,0,0,.7);transform:rotate(-1deg)}
+    .brand span{display:block;color:var(--gold);font-size:.72em;letter-spacing:.08em;margin-top:.28em}
+    .tagline{display:inline-block;margin:24px 0 25px;padding:7px 14px;border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);font-size:clamp(17px,2.2vw,24px);font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.35)}
+    .enter{position:relative;border:0;background:var(--gold);color:#111;padding:15px 24px 14px;font-weight:800;font-size:18px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:5px 5px 0 var(--magenta),0 12px 35px #000;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);transition:transform .18s ease,filter .18s ease}
+    .enter:hover{transform:translate(-2px,-2px);filter:brightness(1.08)} .enter:active{transform:translate(3px,3px)}
+    .enter small{display:block;font-size:11px;letter-spacing:.16em;margin-top:3px}
+    .track-player{animation-delay:1.18s!important;display:flex;width:max-content;max-width:100%;align-items:center;gap:10px;margin:18px auto 0;padding:7px 8px 7px 12px;background:rgba(5,6,5,.8);border-bottom:2px solid var(--gold);box-shadow:0 8px 20px rgba(0,0,0,.3);text-align:left}
+    .track-player span{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--cream)}
+    .track-player button{border:1px solid rgba(255,255,255,.22);background:var(--cream);color:#111;min-width:62px;padding:6px 9px;cursor:pointer;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+    .track-player button:hover,.track-player button:focus-visible{background:var(--gold);outline:none}
+    .experience.in-mine .landing{opacity:0;transform:scale(1.16);visibility:hidden}
+    .experience.in-mine #mineCanvas{transform:scale(1.04)}
+
+    /* Mine interface */
+    .mine-ui{position:absolute;inset:0;z-index:4;opacity:0;visibility:hidden;transition:opacity .7s ease .55s;display:flex;flex-direction:column;justify-content:space-between;padding:max(68px,calc(env(safe-area-inset-top) + 54px)) clamp(16px,3vw,38px) max(18px,env(safe-area-inset-bottom))}
+    .experience.in-mine .mine-ui{opacity:1;visibility:visible}
+    .hud{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;pointer-events:none}
+    .depth{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:13px;color:var(--muted)}
+    .depth strong{display:block;color:var(--cream);font-size:24px;letter-spacing:.02em;font-variant-numeric:tabular-nums;min-width:88px;transition:color .25s ease}.depth strong.tick{color:var(--gold2)}
+    .values{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;max-width:54vw}
+    .values span{font-size:11px;font-weight:800;letter-spacing:.12em;background:rgba(0,0,0,.48);border-bottom:2px solid var(--gold);padding:7px 9px}
+    .mine-center{position:absolute;inset:88px 0 126px;width:100%;pointer-events:none;overflow:hidden;perspective:900px}
+    .ore{position:absolute;left:50%;top:49%;width:clamp(190px,25vw,285px);min-height:210px;border:0;color:var(--cream);background:transparent;cursor:pointer;padding:14px 8px;text-align:center;isolation:isolate;pointer-events:none;filter:drop-shadow(0 16px 25px rgba(0,0,0,.55));opacity:0;transform:translate(-50%,-50%) scale(.68);transition:opacity .48s ease,transform .72s cubic-bezier(.18,.86,.22,1),filter .2s ease}
+    .ore.active{opacity:1;transform:translate(-50%,-50%) scale(1);pointer-events:auto;z-index:2}
+    .ore.departing{opacity:0;transform:translate(-50%,-50%) translateY(20vh) scale(1.28);pointer-events:none}
+    .ore:hover,.ore:focus-visible,.ore.hitting{filter:drop-shadow(0 18px 30px rgba(0,0,0,.8));outline:none}
+    .ore:focus-visible .ore-body{outline:3px solid var(--cream);outline-offset:5px}
+    .timer{position:absolute;left:50%;top:2px;transform:translateX(-50%);z-index:4;width:min(290px,66vw);text-align:center;color:var(--cream);text-transform:uppercase;font-weight:800;letter-spacing:.11em;font-size:11px;text-shadow:0 2px 8px #000}
+    .timer-line{height:5px;margin-top:6px;background:rgba(255,255,255,.18);overflow:hidden}.timer-fill{display:block;width:100%;height:100%;background:var(--gold);transform-origin:left center}
+    .scoop-runner{position:absolute;left:-210px;bottom:7%;z-index:1;width:190px;height:92px;opacity:.82;filter:drop-shadow(0 9px 9px #000);transition:transform .92s cubic-bezier(.2,.8,.2,1),opacity .3s ease}
+    .scoop-runner .scoop-body{position:absolute;left:64px;top:17px;width:92px;height:48px;background:linear-gradient(160deg,#d7a814,#7b5a05 68%,#2b2b26 69%);clip-path:polygon(10% 8%,76% 0,100% 35%,92% 100%,5% 92%,0 36%);border-top:4px solid #ffe36a}
+    .scoop-runner .scoop-cabin{position:absolute;left:101px;top:0;width:43px;height:31px;background:#191b19;border:5px solid #b88d12;clip-path:polygon(16% 0,82% 0,100% 100%,0 100%)}
+    .scoop-runner .scoop-bucket{position:absolute;left:3px;top:39px;width:72px;height:38px;background:linear-gradient(180deg,#77766d,#292a25);clip-path:polygon(0 15%,100% 0,86% 100%,14% 88%);border-bottom:5px solid #a6a395}
+    .scoop-runner::after{content:"";position:absolute;left:70px;bottom:0;width:30px;height:30px;border-radius:50%;background:#111;border:7px solid #626158;box-shadow:57px 0 0 -7px #111,57px 0 0 0 #626158}
+    .scoop-runner.roll{transform:translateX(calc(100vw + 420px));opacity:0}
+    .ore-body{position:absolute;inset:13% 6%;background:linear-gradient(145deg,#4d4c42,#161714 52%,#313229);clip-path:polygon(18% 3%,80% 0,100% 27%,90% 78%,64% 100%,20% 91%,0 60%,4% 22%);box-shadow:inset 0 0 30px #000}
+    .ore[data-type="diamond"] .ore-body{background:radial-gradient(circle at 52% 38%,#fff 0 2%,#9af6ff 3% 8%,#3f949f 9% 16%,transparent 17%),linear-gradient(140deg,#3f4441,#0d0f0e 58%,#262927)}
+    .ore[data-type="gold"] .ore-body{background:radial-gradient(ellipse at 28% 35%,#ffe875 0 3%,#ba7900 4% 9%,transparent 10%),radial-gradient(ellipse at 71% 60%,#ffe875 0 4%,#c18800 5% 11%,transparent 12%),linear-gradient(140deg,#4b4a40,#11120f)}
+    .ore[data-type="quartz"] .ore-body{background:radial-gradient(ellipse at 35% 42%,#ffc2de 0 4%,#b02d68 5% 11%,transparent 12%),radial-gradient(ellipse at 68% 68%,#fff0f7 0 3%,#9d2c61 4% 10%,transparent 11%),linear-gradient(140deg,#484a44,#10110f)}
+    .ore[data-type="team"] .ore-body{background:radial-gradient(ellipse at 31% 38%,#fff2a6 0 4%,#d79f08 5% 11%,transparent 12%),radial-gradient(ellipse at 70% 63%,#dce5e6 0 3%,#6e7b7d 4% 10%,transparent 11%),linear-gradient(140deg,#4b4e49,#101210)}
+    .ore-body::before,.ore-body::after{content:"";position:absolute;background:currentColor;box-shadow:0 0 18px currentColor;transform:rotate(-28deg);opacity:.9}
+    .ore-body::before{width:8px;height:52%;top:21%;left:49%}.ore-body::after{height:7px;width:43%;top:50%;left:30%}
+    .ore[data-type="diamond"] .ore-body{color:#9ef7ff}.ore[data-type="gold"] .ore-body{color:var(--gold)}.ore[data-type="quartz"] .ore-body{color:var(--magenta)}.ore[data-type="team"] .ore-body{color:var(--gold2)}
+    .ore-copy{position:relative;z-index:2;display:flex;min-height:190px;flex-direction:column;align-items:center;justify-content:center;text-shadow:0 3px 8px #000}
+    .ore-copy b{font-family:"Alfa Slab One",serif;font-size:clamp(20px,3vw,34px);line-height:1;text-transform:uppercase;letter-spacing:.02em}
+    .ore-copy small{margin-top:9px;text-transform:uppercase;font-weight:700;letter-spacing:.14em;font-size:12px;color:var(--cream)}
+    .ore-copy em{font-style:normal;color:#12120f;background:var(--gold);padding:3px 7px;margin-top:12px;font-weight:800;font-size:11px;letter-spacing:.1em}
+    .ore[data-type="quartz"] .ore-copy em{background:var(--magenta);color:white}
+    .ore.hitting .ore-body,.ore.hitting .ore-copy{animation:oreHit .36s ease}
+    @keyframes oreHit{20%{transform:translate(7px,2px) rotate(1deg)}45%{transform:translate(-6px,0) rotate(-1deg)}80%{transform:translate(3px,-2px)}}
+    .slogan-bar{align-self:center;width:min(760px,100%);text-align:center;pointer-events:none}
+    .slogan-bar p{margin:0 0 8px;text-transform:uppercase;font-size:clamp(18px,2.6vw,28px);font-weight:800;letter-spacing:.06em;text-shadow:0 2px 9px #000}
+    .slogan-bar p span{color:var(--gold)}
+    .instruction{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.11em;background:rgba(0,0,0,.58);padding:8px 12px}
+    .spark{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 12px var(--gold)}
+    .back{position:absolute;left:clamp(16px,3vw,38px);bottom:max(18px,env(safe-area-inset-bottom));z-index:6;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.48);color:var(--cream);padding:8px 11px;text-transform:uppercase;font-weight:700;letter-spacing:.1em;cursor:pointer}
+    .scoop-cockpit{position:absolute;z-index:5;left:50%;bottom:-38px;width:min(680px,82vw);height:116px;transform:translateX(-50%);clip-path:polygon(6% 0,94% 0,100% 100%,0 100%);background:linear-gradient(180deg,#d9a812 0 10%,#373730 11% 46%,#11120f 47%);border-top:7px solid #ffe36a;box-shadow:0 -12px 30px rgba(0,0,0,.76);pointer-events:none}
+    .scoop-cockpit::before{content:"";position:absolute;left:50%;top:12px;width:46%;height:54px;transform:translateX(-50%);background:#090a09;clip-path:polygon(10% 0,90% 0,100% 100%,0 100%);border:3px solid #6b5c2d}
+    .scoop-cockpit::after{content:"SCOOP";position:absolute;left:50%;top:28px;transform:translateX(-50%);color:#d6a916;font-size:12px;font-weight:800;letter-spacing:.2em}
+    .experience.in-mine #mineCanvas{animation:scoopBob 1.15s linear infinite;transform:scale(1.055)}
+    @keyframes scoopBob{0%,100%{transform:scale(1.055) translateY(0)}50%{transform:scale(1.055) translateY(2px)}}
+
+    /* Jackleg drill */
+    .jackleg{position:absolute;z-index:8;left:50%;bottom:-26px;width:clamp(205px,30vw,330px);height:auto;pointer-events:none;transform-origin:76% 88%;transform:translateX(2%) translateY(8px) rotate(-7deg);filter:drop-shadow(0 12px 12px rgba(0,0,0,.65));opacity:0;transition:opacity .3s ease .8s}
+    .experience.in-mine .jackleg{opacity:1;animation:jackIdle 1.8s ease-in-out infinite}
+    .experience.in-mine .jackleg.drilling{animation:jackDrill .82s cubic-bezier(.16,.78,.2,1)}
+    .jackleg.drilling g{transform-box:fill-box;transform-origin:72% 68%;animation:pneumaticBody .11s steps(2,end) 7}
+    .jackleg.drilling path:first-child{animation:drillBit .07s steps(2,end) 11}
+    @keyframes jackIdle{0%,100%{transform:translateX(2%) translateY(8px) rotate(-7deg)}50%{transform:translateX(1%) translateY(3px) rotate(-8deg)}}
+    @keyframes jackDrill{0%{transform:translateX(2%) translateY(8px) rotate(-7deg)}18%{transform:translateX(-21%) translateY(-40px) rotate(-15deg);filter:drop-shadow(0 14px 18px rgba(0,0,0,.8)) drop-shadow(0 0 9px rgba(245,191,25,.35))}30%{transform:translateX(-17%) translateY(-34px) rotate(-13deg)}42%{transform:translateX(-22%) translateY(-42px) rotate(-16deg)}54%{transform:translateX(-18%) translateY(-35px) rotate(-13deg)}66%{transform:translateX(-22%) translateY(-41px) rotate(-15deg)}80%{transform:translateX(-12%) translateY(-24px) rotate(-11deg)}100%{transform:translateX(2%) translateY(8px) rotate(-7deg)}}
+    @keyframes pneumaticBody{0%{transform:translate(0,0)}100%{transform:translate(-5px,2px)}}
+    @keyframes drillBit{0%{transform:translateX(0)}100%{transform:translateX(-7px)}}
+
+    /* Collection reveal */
+    .collection{position:absolute;inset:0;z-index:12;display:grid;place-items:center;padding:70px 18px 18px;background:rgba(4,5,4,.78);backdrop-filter:blur(12px);opacity:0;visibility:hidden;transition:.35s ease}
+    .collection.open{opacity:1;visibility:visible}
+    .collection-panel{position:relative;width:min(980px,100%);max-height:calc(100svh - 88px);overflow:auto;background:var(--cream);color:#111;box-shadow:var(--shadow);clip-path:polygon(18px 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%,0 18px)}
+    .collection[data-theme="quartz"] .collection-panel{background:radial-gradient(circle at 14% 16%,rgba(241,69,145,.28),transparent 27%),linear-gradient(135deg,#fff8fc,#dccbd4)}
+    .collection[data-theme="diamond"] .collection-panel{background:linear-gradient(118deg,rgba(158,247,255,.2),transparent 42%),repeating-linear-gradient(135deg,#f5fbfb 0 24px,#d6e6e6 25px 26px)}
+    .collection[data-theme="gold"] .collection-panel{background:radial-gradient(circle at 82% 16%,rgba(255,227,106,.44),transparent 28%),linear-gradient(135deg,#fff6d6,#d9b83e)}
+    .collection[data-theme="team"] .collection-panel{background:linear-gradient(120deg,rgba(245,191,25,.22),transparent 44%),repeating-linear-gradient(135deg,#f3f1e8 0 24px,#dce1de 25px 26px)}
+    .collection[data-theme="quartz"] .collection-head{border-color:var(--magenta)}
+    .collection[data-theme="diamond"] .collection-head{border-color:#9ef7ff}
+    .collection[data-theme="gold"] .collection-head{border-color:var(--gold)}
+    .collection[data-theme="team"] .collection-head{border-color:var(--gold2)}
+    .collection[data-theme] .product{background:rgba(255,255,255,.72);backdrop-filter:blur(2px)}
+    .collection[data-theme] .product:nth-child(2){background:rgba(17,18,15,.92)}
+    .collection[data-theme="gold"] .product:nth-child(3){background:rgba(245,191,25,.76)}
+    .collection-head{position:sticky;top:0;z-index:2;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;background:#111;color:var(--cream);padding:22px clamp(20px,4vw,42px);border-bottom:5px solid var(--gold)}
+    .collection-head h2{font-family:"Alfa Slab One",serif;margin:0;text-transform:uppercase;font-size:clamp(27px,5vw,54px);line-height:.95}.collection-head h2 span{display:block;color:var(--gold);font-family:"Barlow Condensed";font-size:.35em;letter-spacing:.13em;margin-bottom:7px}
+    .close{width:42px;height:42px;border:1px solid #555;background:transparent;color:white;font-size:26px;cursor:pointer;flex:0 0 auto}
+    .collection-intro{padding:24px clamp(20px,4vw,42px) 4px;font-size:18px;max-width:680px;margin:0;font-weight:600}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:22px clamp(20px,4vw,42px) 38px}
+    .products.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .product{background:#dedbd2;min-height:290px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+    .product:nth-child(2){background:#151613;color:var(--cream)}.product:nth-child(3){background:var(--gold)}
+    .tee{height:170px;display:grid;place-items:center}
+    .tee svg{width:140px;filter:drop-shadow(0 12px 10px rgba(0,0,0,.28))}
+    .product h3{margin:4px 0 0;text-transform:uppercase;font-family:"Alfa Slab One",serif;font-size:18px;line-height:1.05}.product p{margin:7px 0 0;font-size:14px;font-weight:600;opacity:.72}
+    .concept-note{display:inline-block;margin-top:12px;padding-top:8px;border-top:2px solid currentColor;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+    .products.vein-products{display:grid;grid-template-columns:1fr;gap:18px;padding:22px clamp(20px,4vw,42px) 38px}
+    .vein-design{display:grid;grid-template-columns:minmax(190px,260px) 1fr;background:rgba(255,255,255,.78);box-shadow:0 14px 30px rgba(0,0,0,.18);overflow:hidden}
+    .vein-art{margin:0;background:#080908;align-self:stretch;display:flex;flex-direction:column}.vein-art img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}.vein-art figcaption{padding:8px 11px;color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+    .vein-copy{padding:18px;min-width:0}.vein-copy h3{margin:0;font-family:"Alfa Slab One",serif;font-size:clamp(22px,3vw,34px);line-height:1;text-transform:uppercase}.vein-slogan{margin:7px 0 4px;font-size:18px;font-weight:800;font-style:italic;color:#6c4f00}.vein-pitch{margin:0 0 15px;max-width:720px;font-size:15px;font-weight:600;line-height:1.42;color:#2b2b28}
+    .vein-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.vein-product-link{display:grid;grid-template-columns:92px 1fr;align-items:center;min-width:0;background:#111210;color:var(--cream);text-decoration:none;border-top:3px solid var(--gold);transition:background .18s ease,color .18s ease}.vein-product-link img{display:block;width:92px;height:92px;object-fit:contain;background:#ececec}.vein-product-link span{padding:10px}.vein-product-link strong{display:block;font-family:"Alfa Slab One",serif;font-size:15px;line-height:1.05;text-transform:uppercase}.vein-product-link small{display:block;margin-top:6px;color:var(--gold2);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.vein-product-link:hover,.vein-product-link:focus-visible{background:var(--gold);color:#111;outline:none}.vein-product-link:hover small,.vein-product-link:focus-visible small{color:#111}
+    .collection[data-theme="quartz"] .vein-product-link{border-color:var(--magenta)}.collection[data-theme="diamond"] .vein-product-link{border-color:#6fdce8}.collection[data-theme="team"] .vein-product-link{border-color:var(--gold2)}
+
+    /* Boutique */
+    .collection[data-theme="shop"]{background:rgba(4,5,4,.9);backdrop-filter:blur(8px)}
+    .collection[data-theme="shop"] .collection-panel{width:min(1180px,100%);background:#111210;color:var(--cream);clip-path:polygon(18px 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%,0 18px)}
+    .collection[data-theme="shop"] .collection-head{border-color:var(--gold);background:#080908}
+    .collection[data-theme="shop"] .collection-intro{max-width:820px;color:var(--muted);padding-bottom:18px}
+    .shop-catalog{display:block;padding:0 clamp(14px,3vw,34px) 38px}
+    .shop-design{display:grid;grid-template-columns:minmax(210px,300px) 1fr;gap:clamp(18px,3vw,34px);padding:26px 0;border-top:1px solid rgba(245,191,25,.24)}
+    .shop-design:first-child{border-top:0}
+    .shop-design-art{position:sticky;top:112px;align-self:start;margin:0;background:#050605;box-shadow:0 14px 32px rgba(0,0,0,.35)}
+    .shop-design-art img{display:block;width:100%;aspect-ratio:1/1.08;object-fit:cover}
+    .shop-design-art figcaption{padding:9px 11px;color:var(--gold2);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:11px}
+    .shop-tag{display:inline-block;color:#111;background:var(--gold);padding:5px 8px;margin-bottom:8px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .shop-copy h3{margin:0;font-family:"Alfa Slab One",serif;text-transform:uppercase;font-size:clamp(24px,3vw,38px);line-height:1}
+    .shop-slogan{margin:8px 0 5px;color:var(--gold2);font-size:19px;font-style:italic;font-weight:800}
+    .shop-pitch{margin:0 0 18px;max-width:750px;color:#e0ddd5;font-size:16px;line-height:1.42}
+    .shop-products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .shop-product{background:#1b1c18;border-top:3px solid var(--gold);padding:12px;min-width:0;scroll-margin-top:112px}.shop-product.shop-arrival{animation:shopArrival 1.1s ease}@keyframes shopArrival{0%,30%{box-shadow:0 0 0 4px var(--magenta),0 0 26px rgba(241,69,145,.55)}100%{box-shadow:none}}
+    .shop-visual{position:relative;margin:0 0 10px;background:#ececec;overflow:hidden}
+    .shop-visual>img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain}
+    .view-tabs{display:flex;gap:1px;background:#080908}
+    .view-btn{flex:1;border:0;background:#262721;color:var(--cream);padding:8px 4px;cursor:pointer;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:10px}
+    .view-btn[aria-pressed="true"]{background:var(--gold);color:#111}.view-btn:focus-visible{outline:2px solid var(--cream);outline-offset:-2px}
+    .shop-product h4{margin:0;font-family:"Alfa Slab One",serif;font-size:18px;text-transform:uppercase}
+    .shop-price{display:block;min-height:25px;margin:5px 0 2px;color:var(--gold2);font-size:17px;font-weight:800}
+    .shop-spec{margin:0;color:var(--muted);font-size:13px}.shop-custom{margin:9px 0;color:var(--cream);font-size:13px;font-weight:700}
+    .shop-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:11px}
+    .buy-btn{display:flex;align-items:center;justify-content:center;min-height:42px;border:0;background:var(--gold);color:#111;padding:8px;text-align:center;text-decoration:none;font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:.04em;font-size:11px;cursor:pointer}
+    .buy-btn.custom{background:var(--cream)}.buy-btn:focus-visible{outline:2px solid var(--magenta);outline-offset:2px}.buy-btn[disabled]{background:#32332d;color:#96978f;cursor:not-allowed}
+
+    .flash{position:absolute;inset:0;z-index:7;background:white;opacity:0;pointer-events:none}.flash.on{animation:flash .22s ease-out}@keyframes flash{0%{opacity:.8}100%{opacity:0}}
+    .dust{position:absolute;z-index:9;width:8px;height:8px;background:var(--gold);pointer-events:none;animation:dust .7s ease-out forwards}
+    @keyframes dust{to{transform:translate(var(--dx),var(--dy)) rotate(90deg);opacity:0}}
+
+    @media(max-width:720px){
+      .section-nav{top:max(6px,env(safe-area-inset-top));width:calc(100% - 12px);max-width:none;flex-wrap:wrap}.section-nav button{flex:1 1 20%;min-width:0;padding:7px 3px 6px;min-height:34px;font-size:9px;letter-spacing:.035em;white-space:normal;line-height:1.05}.section-nav .lang-toggle,.section-nav .sound-toggle,.section-nav .music-toggle{flex-basis:33.333%;min-width:0}
+      .landing-inner{transform:translateY(8vh)}.helmet-mark{width:45px;height:45px}.brand span{font-size:.58em;letter-spacing:.04em}.tagline{margin:18px 0 20px;line-height:1.3}
+      .mine-ui{padding-left:12px;padding-right:12px;padding-top:92px}.values span:nth-child(even){display:none}.depth strong{font-size:19px}
+      .mine-center{inset:100px 0 105px}.ore{width:178px;min-height:172px;padding:6px 0}.ore-body{inset:15% 0}.ore-copy{min-height:150px}.ore-copy b{font-size:19px}.ore-copy small{font-size:10px}.ore-copy em{font-size:9px;padding:3px 5px}.timer{top:0}
+      .slogan-bar{padding:0 44px 65px}.slogan-bar p{font-size:17px}.instruction{font-size:9px;padding:7px 8px}.back{font-size:10px;padding:7px 9px}.jackleg{bottom:-12px;width:185px}.scoop-cockpit{width:88vw;height:82px;bottom:-31px}.scoop-runner{bottom:13%;transform:scale(.74)}.scoop-runner.roll{transform:translateX(calc(100vw + 420px)) scale(.74)}
+      .products,.products.two{grid-template-columns:1fr}.product{min-height:245px}.collection-panel{max-height:calc(100svh - 96px)}.collection{padding:86px 6px 6px}
+      .vein-products{padding:14px 12px 28px}.vein-design{grid-template-columns:1fr}.vein-art{display:grid;grid-template-columns:112px 1fr;align-items:center}.vein-art img{aspect-ratio:1/1}.vein-copy{padding:14px}.vein-links{grid-template-columns:1fr}.vein-product-link{grid-template-columns:82px 1fr}.vein-product-link img{width:82px;height:82px}
+      .shop-catalog{padding-left:12px;padding-right:12px}.shop-design{grid-template-columns:1fr;padding:20px 0}.shop-design-art{position:relative;top:auto;display:grid;grid-template-columns:112px 1fr;align-items:center}.shop-design-art img{aspect-ratio:1/1;object-fit:cover}.shop-products{grid-template-columns:1fr}.shop-actions{grid-template-columns:1fr 1fr}.shop-copy h3{font-size:25px}.shop-pitch{font-size:15px}
+    }
+    @media(max-height:620px) and (orientation:landscape){.ore{min-height:165px}.ore-copy{min-height:130px}.mine-center{margin:0 auto}.slogan-bar p{font-size:17px}.values{display:none}.jackleg{width:170px}.landing-inner{transform:none}.brand{font-size:58px}.helmet-mark{display:none}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+<noscript>
+  <div style="position:relative;z-index:50;max-width:760px;margin:14vh auto 40px;padding:28px;font-family:sans-serif;color:#f1eee4;background:#111211;border:1px solid rgba(245,191,25,.25);border-radius:12px;line-height:1.6">
+    <h1 style="margin:0 0 8px;font-size:30px;color:#f5bf19">DIAMONDS DRILL CLOTHING</h1>
+    <p style="margin:0 0 14px">Expérience minière interactive — le site a besoin de JavaScript pour descendre dans la mine. Sans JS, voici la collection direct :</p>
+    <ul style="margin:0;padding-left:20px">
+      <li><a style="color:#ffe36a" href="#shop-resiste">Diamonds Drill — Flagship (« Quand elle résiste, nous on insiste ! »)</a></li>
+      <li><a style="color:#ffe36a" href="#shop-muckeurs_rose">Muckeurs — Rose</a></li>
+      <li><a style="color:#ffe36a" href="#shop-muckeurs_jaune">Muckeurs — Jaune</a></li>
+      <li><a style="color:#ffe36a" href="#shop-conventional">Conventional Mining / Forage de surface</a></li>
+      <li><a style="color:#ffe36a" href="#shop-surface">Surface Drilling</a></li>
+    </ul>
+    <p style="margin:14px 0 0">T-shirt noir / Hoodie noir · logo côté cœur devant, visuel au dos · personnalisation +8 CAD · prix à venir.</p>
+    <p style="margin:8px 0 0"><a style="color:#ffe36a" href="site-info.html">Fiche texte (sans JavaScript)</a></p>
+  </div>
+</noscript>
+<main class="experience" id="experience">
+  <canvas id="mineCanvas" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <nav class="section-nav" aria-label="Accès rapide aux sections" data-i18n-aria="navLabel">
+    <button type="button" data-jump="surface" aria-current="page" data-i18n="navSurface">Surface</button>
+    <button type="button" data-jump="quartz" data-i18n="navEssentials">Essentiels</button>
+    <button type="button" data-jump="diamond" data-i18n="navDriller">Collection Foreur</button>
+    <button type="button" data-jump="gold" data-i18n="navLimited">Éditions limitées</button>
+    <button type="button" data-jump="team" data-i18n="navTeam">Entreprise / Équipes</button>
+    <button type="button" data-jump="shop" data-i18n="navShop">Boutique</button>
+    <button type="button" class="lang-toggle" id="langToggle" aria-label="Switch to English" lang="en">EN</button>
+    <button type="button" class="sound-toggle" id="soundToggle" aria-label="Couper les effets sonores" aria-pressed="true">SFX</button>
+    <button type="button" class="music-toggle" id="musicToggle" aria-label="Couper la musique" aria-pressed="true">MUSIQUE</button>
+  </nav>
+
+  <section class="landing" aria-labelledby="brandTitle">
+    <div class="landing-inner">
+      <svg class="helmet-mark" viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M13 43h38l5 6v5H8v-5l5-6Zm5-3c.3-12 5-21 13-23V10h5v7c8 2 13 11 13 23h-7c-.3-8-2-14-6-16v16h-5V24c-4 2-6.7 8-7 16h-6Z"/><circle cx="51" cy="30" r="6" fill="#f1eee4"/><circle cx="51" cy="30" r="3" fill="currentColor"/></svg>
+      <h1 class="brand" id="brandTitle">DIAMONDS <span>DRILL CLOTHING</span></h1>
+      <p class="tagline" data-i18n="tagline">Quand elle résiste, nous on insiste</p><br>
+      <button class="enter" id="enterBtn"><span data-i18n="enterMine">Descendre dans la mine</span><small data-i18n="interactive">Expérience interactive</small></button>
+      <div class="track-player" role="group" aria-labelledby="weeklyTuneLabel"><span id="weeklyTuneLabel" data-i18n="weeklyTune">Écouter la toune d'la semaine</span><button type="button" id="trackPlayPause">Lire</button><audio id="weeklyTrack" preload="metadata" loop playsinline webkit-playsinline><source src="assets/track1.m4a" type="audio/mp4"><source src="assets/track2.mp3" type="audio/mpeg"></audio></div>
+    </div>
+  </section>
+
+  <section class="mine-ui" id="mineUi" aria-label="Galerie souterraine interactive" data-i18n-aria="mineLabel" inert>
+    <div class="hud">
+      <div class="depth"><span data-i18n="currentLevel">Niveau actuel</span><strong id="depthValue">− 280 M</strong></div>
+      <div class="values" aria-label="Valeurs de la marque" data-i18n-aria="valuesLabel"><span data-i18n="force">Force</span><span data-i18n="precision">Précision</span><span data-i18n="passion">Passion</span><span data-i18n="results">Résultats</span></div>
+    </div>
+
+    <div class="mine-center" role="group" aria-label="Filon central à exploiter" data-i18n-aria="oreGroup">
+      <div class="timer" aria-live="off"><span id="timerLabel">Prochain filon dans 10 s</span><div class="timer-line"><span class="timer-fill" id="timerFill"></span></div></div>
+      <div class="scoop-runner" id="scoopRunner" aria-hidden="true"><i class="scoop-bucket"></i><i class="scoop-body"></i><i class="scoop-cabin"></i></div>
+      <button class="ore active" data-type="quartz" data-name="Les essentiels" aria-label="Forer le filon de quartz — Les essentiels">
+        <span class="ore-body"></span><span class="ore-copy"><b data-i18n="quartz">Quartz</b><small data-i18n="essentials">Les essentiels</small><em data-i18n="drillOre">Forer le filon</em></span>
+      </button>
+      <button class="ore" data-type="diamond" data-name="Collection Foreur" aria-label="Forer le diamant — Collection Foreur, collection phare">
+        <span class="ore-body"></span><span class="ore-copy"><b data-i18n="diamond">Diamant</b><small data-i18n="drillerCollection">Collection Foreur</small><em data-i18n="flagship">Collection phare</em></span>
+      </button>
+      <button class="ore" data-type="gold" data-name="Éditions limitées" aria-label="Forer la veine d'or — Éditions limitées">
+        <span class="ore-body"></span><span class="ore-copy"><b data-i18n="gold">Or</b><small data-i18n="limitedEditions">Éditions limitées</small><em data-i18n="drillVein">Forer la veine</em></span>
+      </button>
+      <button class="ore" data-type="team" data-name="Entreprise / Équipes" aria-label="Forer le filon — Entreprise / Équipes">
+        <span class="ore-body"></span><span class="ore-copy"><b data-i18n="teamOre">Équipe</b><small data-i18n="teamOrders">Entreprise / Équipes</small><em data-i18n="viewSets">Voir les 2 sets</em></span>
+      </button>
+    </div>
+
+    <div class="slogan-bar" aria-live="polite">
+      <p id="hitMessage">Le filon est en place. <span>À toi de forer.</span></p>
+      <div class="instruction"><i class="spark"></i><span id="instruction">3 forages ou 10 secondes — le premier gagne</span></div>
+    </div>
+    <div class="scoop-cockpit" aria-hidden="true"></div>
+    <button class="back" id="backBtn" data-i18n="surfaceBack">↑ Surface</button>
+  </section>
+
+  <svg class="jackleg" id="jackleg" viewBox="0 0 320 280" aria-hidden="true">
+    <g transform="rotate(-28 158 132)">
+      <path d="M17 113 124 113 124 124 17 124Z" fill="#d7d8cf" stroke="#242522" stroke-width="4"/>
+      <path d="m9 118 19-9v18Z" fill="#f5bf19" stroke="#242522" stroke-width="4"/>
+      <rect x="116" y="88" width="86" height="62" rx="9" fill="#d29f10" stroke="#242522" stroke-width="6"/>
+      <path d="M132 95h51v19h-51z" fill="#3e403a"/><path d="M131 129h60" stroke="#fff0a8" stroke-width="6"/>
+      <path d="M163 148 249 258" fill="none" stroke="#c4c5bc" stroke-width="17"/><path d="M163 148 249 258" fill="none" stroke="#3b3c36" stroke-width="5"/>
+      <path d="m238 248 31 9-19 17Z" fill="#67685f" stroke="#242522" stroke-width="5"/>
+      <path d="M190 101h39v13h-39M189 137h34v13h-34" fill="none" stroke="#2b2c29" stroke-width="8"/>
+      <path d="M202 109c44 18 56 48 47 82" fill="none" stroke="#171815" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="145" cy="119" r="8" fill="#f1eee4" stroke="#242522" stroke-width="4"/>
+    </g>
+  </svg>
+  <div class="flash" id="flash"></div>
+
+  <section class="collection" id="collection" data-theme="quartz" role="dialog" aria-modal="true" aria-labelledby="collectionTitle" inert>
+    <div class="collection-panel">
+      <header class="collection-head">
+        <h2 id="collectionTitle"><span>Filon débloqué</span>Collection Foreur</h2>
+        <button class="close" id="closeCollection" aria-label="Fermer la collection">×</button>
+      </header>
+      <p class="collection-intro" id="collectionIntro">Du vêtement de métier avec le diamant dans l’ADN. Robuste sur le chantier, net partout ailleurs.</p>
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var canvas=document.getElementById('mineCanvas'),ctx=canvas.getContext('2d'),exp=document.getElementById('experience'),mineUi=document.getElementById('mineUi');
+  var enter=document.getElementById('enterBtn'),back=document.getElementById('backBtn'),jackleg=document.getElementById('jackleg'),flash=document.getElementById('flash');
+  var modal=document.getElementById('collection'),closeBtn=document.getElementById('closeCollection'),message=document.getElementById('hitMessage'),instruction=document.getElementById('instruction');
+  var timerLabel=document.getElementById('timerLabel'),timerFill=document.getElementById('timerFill'),scoopRunner=document.getElementById('scoopRunner'),depthEl=document.getElementById('depthValue'),langToggle=document.getElementById('langToggle'),soundToggle=document.getElementById('soundToggle'),musicToggle=document.getElementById('musicToggle'),trackPlayPause=document.getElementById('trackPlayPause'),musicEl=document.getElementById('weeklyTrack');
+  var ores=Array.prototype.slice.call(document.querySelectorAll('.ore')),oreOrder=['quartz','diamond','gold','team'];
+  var scene='surface',stars=[],dustMotes=[],motion=0,activeIndex=0,hits=0,cycleStarted=0,advancing=false,jumpTimer=null,jumpTarget=null,navToken=0,surfaceStarted=performance.now(),mineStarted=0,currentLang='fr',lastCollectionType='quartz',audioCtx=null,engineOsc=null,engineGain=null,soundEnabled=true,musicEnabled=true,musicStarted=false;
+  var reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var palette={diamond:'#9ef7ff',gold:'#f5bf19',quartz:'#f14591',team:'#ffe36a'};
+  var copy={
+    fr:{navLabel:'Accès rapide aux sections',navSurface:'Surface',navEssentials:'Essentiels',navDriller:'Collection Foreur',navLimited:'Éditions limitées',navTeam:'Entreprise / Équipes',navShop:'Boutique',tagline:'Quand elle résiste, nous on insiste',enterMine:'Descendre dans la mine',interactive:'Expérience interactive',weeklyTune:"Écouter la toune d'la semaine",playMusic:'Lire',pauseMusic:'Pause',mineLabel:'Galerie souterraine interactive',currentLevel:'Niveau actuel',valuesLabel:'Valeurs de la marque',force:'Force',precision:'Précision',passion:'Passion',results:'Résultats',oreGroup:'Filon central à exploiter',quartz:'Quartz',essentials:'Les essentiels',drillOre:'Forer le filon',diamond:'Diamant',drillerCollection:'Collection Foreur',flagship:'Collection phare',gold:'Or',limitedEditions:'Éditions limitées',drillVein:'Forer la veine',teamOre:'Équipe',teamOrders:'Entreprise / Équipes',viewSets:'Voir les 2 sets',surfaceBack:'↑ Surface',nextOre:'Prochain filon dans {n} s',ready:'Le filon est en place. <span>À toi de forer.</span>',drillRule:'3 forages ou 10 secondes — le premier gagne',center:'{name} est au centre. <span>Fore le filon.</span>',again2:'Encore 2 forages',again1:'Encore 1 forage',resists:'Quand elle <span>résiste…</span>',insist:'Nous, on <span>insiste.</span>',unlocked:'Filon débloqué',opened:'<span>Filon ouvert.</span> Le scoop avance.',moving:'Le scoop avance. <span>Prochain filon.</span>',collectionUnlocked:'Collection débloquée',timeElapsed:'10 secondes écoulées',close:'Fermer la collection',concept:'Concept de collection',oreNames:{quartz:'Les essentiels',diamond:'Collection Foreur',gold:'Éditions limitées',team:'Entreprise / Équipes'}}, 
+    en:{navLabel:'Quick access to sections',navSurface:'Surface',navEssentials:'Essentials',navDriller:'Driller Collection',navLimited:'Limited editions',navTeam:'Business / Teams',navShop:'Shop',tagline:'When it resists, we insist',enterMine:'Descend into the mine',interactive:'Interactive experience',weeklyTune:"Listen to this week's tune",playMusic:'Play',pauseMusic:'Pause',mineLabel:'Interactive underground gallery',currentLevel:'Current depth',valuesLabel:'Brand values',force:'Strength',precision:'Precision',passion:'Passion',results:'Results',oreGroup:'Central ore face to drill',quartz:'Quartz',essentials:'The essentials',drillOre:'Drill the ore',diamond:'Diamond',drillerCollection:'Driller Collection',flagship:'Flagship collection',gold:'Gold',limitedEditions:'Limited editions',drillVein:'Drill the vein',teamOre:'Team',teamOrders:'Business / Teams',viewSets:'View the 2 sets',surfaceBack:'↑ Surface',nextOre:'Next ore face in {n} s',ready:'The ore face is ready. <span>Start drilling.</span>',drillRule:'3 drills or 10 seconds — whichever comes first',center:'{name} is centered. <span>Drill the ore.</span>',again2:'2 more drills',again1:'1 more drill',resists:'When it <span>resists…</span>',insist:'We <span>insist.</span>',unlocked:'Ore unlocked',opened:'<span>Ore opened.</span> The scoop moves on.',moving:'The scoop moves on. <span>Next ore face.</span>',collectionUnlocked:'Collection unlocked',timeElapsed:'10 seconds elapsed',close:'Close collection',concept:'Collection concept',oreNames:{quartz:'The essentials',diamond:'Driller Collection',gold:'Limited editions',team:'Business / Teams'}}
+  };
+  var collectionCopy={
+    fr:{diamond:{title:'Filon Diamant',intro:'La pièce manifeste de Diamonds Drill, reliée directement à sa fiche boutique.',productIds:['resiste']},gold:{title:'Filon Or',intro:'La collection Muckeurs en rose et en jaune — quatre pièces faites pour la gang qui fait avancer la mine.',productIds:['muckeurs_rose','muckeurs_jaune']},quartz:{title:'Filon Quartz',intro:'Le cycle du conventional sur deux essentiels noirs : muck, drill, blast — repeat.',productIds:['conventional']},team:{title:'Surface · Équipes',intro:'Le forage au diamant en surface, pour les crews de terrain qui livrent dans toutes les conditions.',productIds:['surface']}},
+    en:{diamond:{title:'Diamond Vein',intro:'The Diamonds Drill manifesto piece, connected directly to its shop listing.',productIds:['resiste']},gold:{title:'Gold Vein',intro:'The Muckers collection in pink and yellow — four pieces for the crew that keeps the mine moving.',productIds:['muckeurs_rose','muckeurs_jaune']},quartz:{title:'Quartz Vein',intro:'The conventional cycle on two black essentials: muck, drill, blast — repeat.',productIds:['conventional']},team:{title:'Surface · Teams',intro:'Surface diamond drilling for field crews who deliver in every condition.',productIds:['surface']}}
+  };
+  /* Collez ici les Payment Links Stripe de Max. Chaque produit a un lien régulier et un lien avec nom personnalisé. */
+  var STRIPE_LINKS={
+    resiste_tee:{standard:'',custom:''},resiste_hoodie:{standard:'',custom:''},
+    muckeurs_rose_tee:{standard:'',custom:''},muckeurs_rose_hoodie:{standard:'',custom:''},
+    muckeurs_jaune_tee:{standard:'',custom:''},muckeurs_jaune_hoodie:{standard:'',custom:''},
+    conventional_tee:{standard:'',custom:''},conventional_hoodie:{standard:'',custom:''},
+    surface_tee:{standard:'',custom:''},surface_hoodie:{standard:'',custom:''}
+  };
+  var shopProducts=[
+    {id:'resiste',design:'assets/resiste-design.jpg',backTee:'assets/resiste-back-tee.webp',backHoodie:'assets/resiste-back-hoodie.webp',fr:{name:'Diamonds Drill — Flagship',slogan:'« Quand elle résiste, nous on insiste ! »',pitch:"Le manifeste de la marque. Pour ceux qui connaissent la roche — vraiment. Quand elle résiste, nous on insiste : c’est pas un slogan, c’est un quart de travail. Foreurs, muckeurs, toute la gang du fond : ce morceau-là se porte comme une déclaration.",tag:'Filon Diamant · vitrine principale'},en:{name:'Diamonds Drill — Flagship',slogan:'“When it resists, we insist!”',pitch:"The brand manifesto. For those who truly know the rock. When it resists, we insist: it’s not a slogan, it’s a shift underground. Drillers, muckers, the whole crew at the face — wear this one like a declaration.",tag:'Diamond Vein · flagship'}},
+    {id:'muckeurs_rose',design:'assets/muckeurs_rose-design.jpg',backTee:'assets/muckeurs_rose-back-tee.webp',backHoodie:'assets/muckeurs_rose-back-hoodie.webp',fr:{name:'Muckeurs — Rose',slogan:'« Sous terre, on fait avancer la mine. »',pitch:"Pour les femmes du fond. Celles qui runnent le scoop sur des quarts de 12 heures pis qui avancent la mine sans demander la permission à personne. Le rose, c’est pas une concession — c’est un drapeau.",tag:'Filon Or · collection Muckeurs'},en:{name:'Muckers — Pink',slogan:'“Underground, we keep the mine moving.”',pitch:"For the women underground — running the scoop through 12-hour shifts and moving the mine forward without asking anyone’s permission. Pink isn’t a concession. It’s a flag.",tag:'Gold Vein · Muckers collection'}},
+    {id:'muckeurs_jaune',design:'assets/muckeurs_jaune-design.jpg',backTee:'assets/muckeurs_jaune-back-tee.webp',backHoodie:'assets/muckeurs_jaune-back-hoodie.webp',fr:{name:'Muckeurs — Jaune',slogan:'« Sous terre, on fait avancer la mine. »',pitch:"La version jaune pour la gang des muckeurs : ceux qui nettoient le front, qui chargent, qui font avancer la mine un bucket à la fois. Sans muckeurs, pas de mine. Point final.",tag:'Filon Or · collection Muckeurs'},en:{name:'Muckers — Yellow',slogan:'“Underground, we keep the mine moving.”',pitch:"The yellow version for the mucking crew: the ones clearing the face, loading out, and moving the mine forward one bucket at a time. No muckers, no mine. Period.",tag:'Gold Vein · Muckers collection'}},
+    {id:'conventional',design:'assets/conventional-design.jpg',backTee:'assets/conventional-back-tee.webp',backHoodie:'assets/conventional-back-hoodie.webp',fr:{name:'Conventional Mining',slogan:'« Muck ★ Drill ★ Blast »',pitch:"Le cycle du conventional, en toutes lettres : muck, drill, blast — repeat. Pour les gars du jackleg et de la drift qui connaissent chaque étape par cœur, parce qu’ils la vivent à chaque quart.",tag:'Filon Quartz · Conventional'},en:{name:'Conventional Mining',slogan:'“Muck ★ Drill ★ Blast”',pitch:"The conventional cycle, plain and simple: muck, drill, blast — repeat. For the jackleg and drift crews who know every step by heart because they live it every shift.",tag:'Quartz Vein · Conventional'}},
+    {id:'surface',design:'assets/surface-design.jpg',backTee:'assets/surface-back-tee.webp',backHoodie:'assets/surface-back-hoodie.webp',fr:{name:'Forage de surface',slogan:'« Des gens de terrain qui font la différence »',pitch:"Le forage au diamant en surface : la drill, le crew, le terrain. Pour les équipes qui montent les rigs dans bouette pis qui livrent pareil. Des gens de terrain — pas de bureau.",tag:'Filon Surface · Équipes'},en:{name:'Surface Drilling',slogan:'“Field people who make the difference”',pitch:"Surface diamond drilling: the rig, the crew, the ground. For the teams who set up in the mud and deliver anyway. Field people — not desk people.",tag:'Surface Vein · Teams'}}
+  ];
+  var shopUi={
+    fr:{eyebrow:'Boutique intégrée',title:'Boutique',intro:'Cinq designs. Deux essentiels noirs par design. Petit logo côté cœur devant, visuel moyen au dos — toujours.',tee:'T-shirt noir',hoodie:'Hoodie noir',front:'Devant',back:'Dos',design:'Visuel',price:'Prix à venir',spec:'Petit logo cœur devant · design moyen au dos',custom:'Personnalisation +8 $ : nom côté cœur',soon:'Bientôt disponible',buy:'Acheter',buyCustom:'Acheter + nom',viewProduct:'Voir dans la boutique',designAlt:'Visuel original',frontAlt:'Vue devant avec petit logo côté cœur',backAlt:'Vue dos avec design moyen'},
+    en:{eyebrow:'Integrated shop',title:'Shop',intro:'Five designs. Two black essentials per design. Small left-chest logo on the front, medium graphic on the back — always.',tee:'Black T-shirt',hoodie:'Black hoodie',front:'Front',back:'Back',design:'Artwork',price:'Price coming soon',spec:'Small left-chest logo · medium back graphic',custom:'Customization +$8: name on left chest',soon:'Coming soon',buy:'Buy',buyCustom:'Buy + name',viewProduct:'View in the shop',designAlt:'Original artwork',frontAlt:'Front view with small left-chest logo',backAlt:'Back view with medium graphic'}
+  };
+  var soundLabels={fr:{on:'Couper les effets sonores',off:'Activer les effets sonores'},en:{on:'Mute sound effects',off:'Turn on sound effects'}};
+  var musicLabels={fr:{on:'Couper la musique',off:'Activer la musique',short:'MUSIQUE'},en:{on:'Mute music',off:'Turn on music',short:'MUSIC'}};
+  function syncMusicUi(){var playing=musicEnabled&&musicStarted;musicToggle.textContent=musicLabels[currentLang].short;musicToggle.setAttribute('aria-label',musicLabels[currentLang][musicEnabled?'on':'off']);musicToggle.setAttribute('aria-pressed',musicEnabled?'true':'false');trackPlayPause.textContent=tr(playing?'pauseMusic':'playMusic');trackPlayPause.setAttribute('aria-label',tr(playing?'pauseMusic':'playMusic'));trackPlayPause.setAttribute('aria-pressed',playing?'true':'false')}
+  function tr(key){return copy[currentLang][key]||key}
+  function named(template,values){return template.replace(/\{(\w+)\}/g,function(_,key){return values[key]})}
+  function applyLanguage(){
+    document.documentElement.lang=currentLang==='fr'?'fr-CA':'en';
+    document.querySelectorAll('[data-i18n]').forEach(function(el){el.textContent=tr(el.dataset.i18n)});
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){el.setAttribute('aria-label',tr(el.dataset.i18nAria))});
+    langToggle.textContent=currentLang==='fr'?'EN':'FR';langToggle.lang=currentLang==='fr'?'en':'fr';langToggle.setAttribute('aria-label',currentLang==='fr'?'Switch to English':'Passer au français');
+    soundToggle.setAttribute('aria-label',soundLabels[currentLang][soundEnabled?'on':'off']);soundToggle.setAttribute('aria-pressed',soundEnabled?'true':'false');
+    syncMusicUi();
+    ores.forEach(function(ore){var type=ore.dataset.type,name=tr('oreNames')[type];ore.dataset.name=name;if(type==='quartz')ore.setAttribute('aria-label',currentLang==='fr'?'Forer le filon de quartz — '+name:'Drill the quartz ore — '+name);if(type==='diamond')ore.setAttribute('aria-label',currentLang==='fr'?'Forer le diamant — '+name+', collection phare':'Drill the diamond — '+name+', flagship collection');if(type==='gold')ore.setAttribute('aria-label',currentLang==='fr'?"Forer la veine d'or — "+name:'Drill the gold vein — '+name);if(type==='team')ore.setAttribute('aria-label',currentLang==='fr'?'Forer le filon — '+name:'Drill the ore — '+name)});
+    closeBtn.setAttribute('aria-label',tr('close'));
+    if(modal.classList.contains('open'))renderCollection(lastCollectionType);
+    else if(scene==='mine'){var ore=activeOre();if(!advancing){message.innerHTML=hits===0?named(tr('center'),{name:ore.dataset.name}):hits===1?tr('resists'):tr('insist');instruction.textContent=hits===0?tr('drillRule'):hits===1?tr('again2'):tr('again1')}}
+    else{message.innerHTML=tr('ready');instruction.textContent=tr('drillRule')}
+  }
+  function size(){var d=Math.min(devicePixelRatio||1,2),r=canvas.getBoundingClientRect();canvas.width=r.width*d;canvas.height=r.height*d;ctx.setTransform(d,0,0,d,0,0);draw()}
+  function rand(a,b){return a+Math.random()*(b-a)}
+  for(var i=0;i<80;i++) stars.push({x:Math.random(),y:Math.random()*.55,r:rand(.3,1.3),a:rand(.25,.9)});
+  for(var j=0;j<50;j++) dustMotes.push({x:Math.random(),y:Math.random(),r:rand(.5,2),a:rand(.05,.28)});
+  function poly(points,fill){ctx.beginPath();ctx.moveTo(points[0][0],points[0][1]);for(var i=1;i<points.length;i++)ctx.lineTo(points[i][0],points[i][1]);ctx.closePath();ctx.fillStyle=fill;ctx.fill()}
+  function drawSurface(w,h,now){
+    var elapsed=Math.max(0,(now||surfaceStarted)-surfaceStarted),intro=Math.min(1,elapsed/2200),cycle=(elapsed%18000)/18000;
+    var daylight=(Math.sin(cycle*Math.PI*2-Math.PI/2)+1)/2,sunX=w*(.08+.84*cycle),sunY=h*(.58-.43*Math.sin(cycle*Math.PI));
+    var top='rgb('+Math.round(18+daylight*62)+','+Math.round(20+daylight*78)+','+Math.round(24+daylight*98)+')';
+    var horizon='rgb('+Math.round(70+daylight*106)+','+Math.round(50+daylight*84)+','+Math.round(35+daylight*72)+')';
+    var g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,top);g.addColorStop(.58,horizon);g.addColorStop(1,'#11120f');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+    stars.forEach(function(s){ctx.globalAlpha=s.a*(1-daylight);ctx.fillStyle='#fff5d0';ctx.beginPath();ctx.arc(s.x*w,s.y*h,s.r,0,7);ctx.fill()});ctx.globalAlpha=1;
+    var sun=ctx.createRadialGradient(sunX,sunY,2,sunX,sunY,Math.min(w,h)*.17);sun.addColorStop(0,'rgba(255,240,160,.95)');sun.addColorStop(.18,'rgba(245,191,25,.55)');sun.addColorStop(1,'rgba(245,191,25,0)');ctx.fillStyle=sun;ctx.fillRect(sunX-w*.22,sunY-h*.25,w*.44,h*.5);
+    var rise=(1-intro)*h*.24;
+    poly([[0,h*.62+rise],[w*.12,h*.44+rise],[w*.25,h*.55+rise],[w*.37,h*.34+rise],[w*.51,h*.58+rise],[w*.7,h*.39+rise],[w,h*.6+rise],[w,h],[0,h]],'#24251f');
+    poly([[0,h*.72+rise*.65],[w*.18,h*.53+rise*.65],[w*.36,h*.72+rise*.65],[w*.54,h*.48+rise*.65],[w*.72,h*.67+rise*.65],[w*.88,h*.48+rise*.65],[w,h*.62+rise*.65],[w,h],[0,h]],'#171815');
+    // Trees rise firmly from the ground during the entrance reveal.
+    ctx.fillStyle='#0b0c0a';[.06,.12,.31,.74,.83,.94].forEach(function(x,i){var th=h*(.08+(i%3)*.025)*intro,base=h*(.69+(i%2)*.04);ctx.fillRect(x*w-2,base-th,4,th);for(var b=0;b<3;b++){var by=base-th*(.28+b*.2),spread=th*(.18+b*.07);poly([[x*w,by-th*.16],[x*w-spread,by+th*.12],[x*w+spread,by+th*.12]],'#0b0c0a')}});
+    poly([[w*.44,h],[w*.48,h*.58],[w*.53,h*.58],[w*.62,h]],'#79643e');
+    ctx.strokeStyle='#b99a54';ctx.lineWidth=2;ctx.setLineDash([12,16]);ctx.beginPath();ctx.moveTo(w*.53,h);ctx.lineTo(w*.505,h*.6);ctx.stroke();ctx.setLineDash([]);
+    var ex=w*.5,ey=h*.59,ew=Math.min(w*.2,190),eh=Math.min(h*.25,170);var glow=ctx.createRadialGradient(ex,ey,2,ex,ey,ew*1.25);glow.addColorStop(0,'rgba(245,191,25,.56)');glow.addColorStop(1,'rgba(245,191,25,0)');ctx.fillStyle=glow;ctx.fillRect(ex-ew*1.4,ey-eh*1.4,ew*2.8,eh*2.8);
+    ctx.fillStyle='#050605';ctx.beginPath();ctx.arc(ex,ey,ew*.34,Math.PI,0);ctx.lineTo(ex+ew*.34,ey+eh*.42);ctx.lineTo(ex-ew*.34,ey+eh*.42);ctx.closePath();ctx.fill();
+    ctx.strokeStyle='#7f6533';ctx.lineWidth=7;ctx.beginPath();ctx.arc(ex,ey,ew*.34,Math.PI,0);ctx.stroke();
+    ctx.strokeStyle='#080908';ctx.lineWidth=6;ctx.beginPath();ctx.moveTo(w*.17,h*.54);ctx.lineTo(w*.2,h*.34);ctx.lineTo(w*.28,h*.56);ctx.moveTo(w*.19,h*.4);ctx.lineTo(w*.255,h*.4);ctx.stroke();
+  }
+  function drawTunnel(w,h){
+    var g=ctx.createRadialGradient(w*.5,h*.47,5,w*.5,h*.48,Math.max(w,h)*.72);g.addColorStop(0,'#292a22');g.addColorStop(.3,'#171814');g.addColorStop(1,'#040504');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+    var vx=w*.5,vy=h*.47;
+    // The timber arches grow toward the viewer: a perpetual forward camera move.
+    for(var k=0;k<11;k++){var raw=(k/11+motion)%1,t=raw*raw,ww=w*(.09+t*.95),hh=h*(.06+t*.92);ctx.strokeStyle='rgba(133,120,90,'+(.12+t*.28)+')';ctx.lineWidth=2+t*5;ctx.beginPath();ctx.moveTo(vx-ww/2,vy+hh/2);ctx.lineTo(vx-ww/2,vy-hh*.3);ctx.quadraticCurveTo(vx,vy-hh*.68,vx+ww/2,vy-hh*.3);ctx.lineTo(vx+ww/2,vy+hh/2);ctx.stroke()}
+    // wall streaks reinforce motion without turning the scene into a blur.
+    ctx.strokeStyle='rgba(201,178,112,.12)';ctx.lineWidth=2;for(var s=0;s<9;s++){var sy=((s/9+motion*1.7)%1);ctx.beginPath();ctx.moveTo(0,vy+(sy*sy)*h*.55);ctx.lineTo(w*.38,vy+sy*h*.14);ctx.moveTo(w,vy+(sy*sy)*h*.55);ctx.lineTo(w*.62,vy+sy*h*.14);ctx.stroke()}
+    // Suspended work-light strings move with the tunnel; a few bulbs flicker irregularly.
+    [-1,1].forEach(function(side){ctx.strokeStyle='rgba(40,35,24,.9)';ctx.lineWidth=2;ctx.beginPath();for(var q=0;q<12;q++){var lr=(q/12+motion*1.15)%1,le=lr*lr,lx=vx+side*w*(.07+.39*le),ly=vy-h*(.08+.25*le)+Math.sin(q*1.9)*5*le;if(q===0)ctx.moveTo(lx,ly);else ctx.lineTo(lx,ly)}ctx.stroke();for(var b=0;b<12;b++){var br=(b/12+motion*1.15)%1,be=br*br,bx=vx+side*w*(.07+.39*be),by=vy-h*(.08+.25*be)+Math.sin(b*1.9)*5*be,blink=((b*7+Math.floor(motion*90))%23===0)?.18:1,rad=2+be*5;ctx.globalAlpha=(.55+be*.45)*blink;ctx.fillStyle='#ffe36a';ctx.shadowColor='#f5bf19';ctx.shadowBlur=8+be*18;ctx.beginPath();ctx.arc(bx,by,rad,0,7);ctx.fill();ctx.shadowBlur=0}});ctx.globalAlpha=1;
+    // Rough mine floor flowing beneath the scoop — no rails.
+    for(var n=0;n<18;n++){var tr=(n/18+motion*1.3)%1,te=tr*tr,y=vy+h*.56*te,offset=Math.sin(n*2.1)*w*.14*te;ctx.fillStyle='rgba(126,112,82,'+(.08+te*.18)+')';ctx.beginPath();ctx.ellipse(vx+offset,y,4+te*20,2+te*6,0,0,7);ctx.fill()}
+    // lamp cone
+    var lamp=ctx.createRadialGradient(vx,vy,4,vx,vy,Math.min(w,h)*.78);lamp.addColorStop(0,'rgba(255,231,144,.36)');lamp.addColorStop(.55,'rgba(245,191,25,.12)');lamp.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=lamp;ctx.fillRect(0,0,w,h);
+    dustMotes.forEach(function(m){var my=(m.y+motion*.8)%1;ctx.globalAlpha=m.a;ctx.fillStyle='#f1e4c0';ctx.beginPath();ctx.arc(m.x*w,my*h,m.r*(.7+my),0,7);ctx.fill()});ctx.globalAlpha=1;
+  }
+  function draw(now){var w=canvas.clientWidth,h=canvas.clientHeight;ctx.clearRect(0,0,w,h);scene==='surface'?drawSurface(w,h,now):drawTunnel(w,h)}
+  function withAudio(fn){
+    if(!soundEnabled)return;var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;if(!audioCtx)audioCtx=new AC();
+    if(audioCtx.state==='running'){fn();return}var resumed=audioCtx.resume();if(resumed&&resumed.then)resumed.then(fn).catch(function(){});else fn();
+  }
+  musicEl.volume=.55;
+  musicEl.addEventListener('playing',function(){musicStarted=true;syncMusicUi()});
+  musicEl.addEventListener('pause',function(){musicStarted=false;syncMusicUi()});
+  musicEl.addEventListener('ended',function(){musicStarted=false;syncMusicUi()});
+  musicEl.addEventListener('error',function(){musicStarted=false;syncMusicUi()});
+  function ensureMusic(){return !!musicEl}
+
+  function startMusic(){
+    if(!musicEnabled||!ensureMusic())return;var playing=musicEl.play();if(playing&&playing.then){playing.then(function(){musicStarted=true;syncMusicUi()}).catch(function(){musicStarted=false;syncMusicUi()})}else{musicStarted=!musicEl.paused;syncMusicUi()}
+  }
+  function stopMusic(){
+    if(musicEl)musicEl.pause();musicStarted=false;syncMusicUi();
+  }
+  function tone(freq,duration,gain,type,delay,endFreq){withAudio(function(){var t=audioCtx.currentTime+(delay||0),osc=audioCtx.createOscillator(),vol=audioCtx.createGain();osc.type=type||'sine';osc.frequency.setValueAtTime(freq,t);if(endFreq)osc.frequency.exponentialRampToValueAtTime(endFreq,t+duration);vol.gain.setValueAtTime(.0001,t);vol.gain.exponentialRampToValueAtTime(gain||.02,t+.012);vol.gain.exponentialRampToValueAtTime(.0001,t+duration);osc.connect(vol);vol.connect(audioCtx.destination);osc.start(t);osc.stop(t+duration+.03)})}
+  function noiseBurst(duration,gain,delay,cutoff){withAudio(function(){var t=audioCtx.currentTime+(delay||0),length=Math.max(1,Math.floor(audioCtx.sampleRate*duration)),buffer=audioCtx.createBuffer(1,length,audioCtx.sampleRate),data=buffer.getChannelData(0);for(var i=0;i<length;i++)data[i]=(Math.random()*2-1)*(1-i/length);var src=audioCtx.createBufferSource(),filter=audioCtx.createBiquadFilter(),vol=audioCtx.createGain();src.buffer=buffer;filter.type='lowpass';filter.frequency.value=cutoff||1200;vol.gain.setValueAtTime(.0001,t);vol.gain.exponentialRampToValueAtTime(gain||.025,t+.008);vol.gain.exponentialRampToValueAtTime(.0001,t+duration);src.connect(filter);filter.connect(vol);vol.connect(audioCtx.destination);src.start(t);src.stop(t+duration+.02)})}
+  function playUi(){tone(620,.065,.014,'square',0,460)}
+  function playDescent(){tone(150,.65,.05,'sawtooth',0,48);noiseBurst(.5,.035,.02,500)}
+  function playDrill(){for(var i=0;i<8;i++){noiseBurst(.055,.045,i*.068,1500);tone(74,.05,.026,'square',i*.068,54)}tone(48,.28,.035,'sine',.5,38)}
+  function playScoop(){tone(78,.62,.04,'sawtooth',0,46);noiseBurst(.5,.026,.06,680);tone(126,.18,.018,'square',.42,82)}
+  function playReveal(){tone(330,.16,.025,'triangle',0,420);tone(495,.22,.024,'triangle',.11,620);tone(742,.32,.018,'sine',.22,880)}
+  function playReturn(){noiseBurst(.35,.022,0,900);tone(180,.34,.026,'triangle',0,310)}
+  function startEngine(){
+    withAudio(function(){if(scene!=='mine')return;var t=audioCtx.currentTime;if(!engineOsc){engineOsc=audioCtx.createOscillator();engineGain=audioCtx.createGain();var filter=audioCtx.createBiquadFilter(),lfo=audioCtx.createOscillator(),lfoGain=audioCtx.createGain();engineOsc.type='sawtooth';engineOsc.frequency.value=52;filter.type='lowpass';filter.frequency.value=180;filter.Q.value=.8;engineGain.gain.value=.0001;lfo.type='sine';lfo.frequency.value=4.4;lfoGain.gain.value=3.5;lfo.connect(lfoGain);lfoGain.connect(engineOsc.frequency);engineOsc.connect(filter);filter.connect(engineGain);engineGain.connect(audioCtx.destination);engineOsc.start();lfo.start()}engineGain.gain.cancelScheduledValues(t);engineGain.gain.setValueAtTime(Math.max(.0001,engineGain.gain.value),t);engineGain.gain.exponentialRampToValueAtTime(.034,t+.32)})
+  }
+  function stopEngine(){if(audioCtx&&engineGain&&audioCtx.state==='running'){var t=audioCtx.currentTime;engineGain.gain.cancelScheduledValues(t);engineGain.gain.setValueAtTime(Math.max(.0001,engineGain.gain.value),t);engineGain.gain.exponentialRampToValueAtTime(.0001,t+.18)}}
+  function setNav(type){document.querySelectorAll('.section-nav button').forEach(function(btn){if(btn.dataset.jump===type)btn.setAttribute('aria-current','page');else btn.removeAttribute('aria-current')})}
+  function activeOre(){return document.querySelector('.ore[data-type="'+oreOrder[activeIndex]+'"]')}
+  function setActive(index,focusIt){activeIndex=(index+oreOrder.length)%oreOrder.length;hits=0;advancing=false;ores.forEach(function(ore){ore.classList.remove('active','departing');ore.setAttribute('tabindex','-1')});var ore=activeOre();ore.classList.add('active');ore.setAttribute('tabindex','0');cycleStarted=performance.now();timerFill.style.transform='scaleX(1)';timerLabel.textContent=named(tr('nextOre'),{n:10});message.innerHTML=named(tr('center'),{name:ore.dataset.name});instruction.textContent=tr('drillRule');setNav(ore.dataset.type);if(focusIt)setTimeout(function(){ore.focus()},120)}
+  function enterMine(type){scene='mine';mineStarted=performance.now();depthEl.textContent='− 280 M';startEngine();draw();exp.classList.add('in-mine');mineUi.removeAttribute('inert');var index=type?oreOrder.indexOf(type):activeIndex;setActive(index<0?0:index,false);setTimeout(function(){activeOre().focus()},900)}
+  function surface(){if(scene==='mine')playReturn();navToken++;if(jumpTimer)clearTimeout(jumpTimer);jumpTimer=null;jumpTarget=null;scene='surface';stopEngine();surfaceStarted=performance.now();exp.classList.remove('in-mine');mineUi.setAttribute('inert','');modal.classList.remove('open');modal.setAttribute('inert','');advancing=false;hits=0;ores.forEach(function(ore){ore.classList.remove('departing')});setNav('surface');message.innerHTML=tr('ready');instruction.textContent=tr('drillRule');draw();setTimeout(function(){if(scene==='surface')enter.focus()},700)}
+  function teeSvg(kind,index){var fills=kind==='gold'?['#151613','#e5b316','#f1eee4']:kind==='quartz'?['#f1eee4','#181917','#f14591']:['#111210','#f1eee4','#f5bf19'];var f=fills[index%3],ink=f==='#111210'||f==='#151613'?'#f5bf19':'#151613';return '<svg viewBox="0 0 180 180" aria-hidden="true"><path fill="'+f+'" stroke="#080908" stroke-width="4" d="M54 22 25 38 9 78l28 11 10-22v91h86V67l10 22 28-11-16-40-29-16c-7 12-18 17-36 17S61 34 54 22Z"/><path d="M62 24c3 19 53 19 56 0" fill="none" stroke="'+ink+'" stroke-width="4"/><path d="M61 75h58M69 83h42" stroke="'+ink+'" stroke-width="8"/><text x="90" y="112" text-anchor="middle" fill="'+ink+'" font-family="Impact" font-size="18">DRILL</text><path d="m76 125 27-27M90 132l27-27" stroke="'+ink+'" stroke-width="4"/></svg>'}
+  function shopAction(url,label,soon,aria){if(/^https:\/\//.test(url||''))return '<a class="buy-btn'+(label.indexOf('+')>-1?' custom':'')+'" href="'+url+'" target="_blank" rel="noopener">'+label+'</a>';return '<button class="buy-btn'+(aria.indexOf('+')>-1?' custom':'')+'" type="button" disabled aria-label="'+aria+'">'+soon+'</button>'}
+  function renderShop(){var ui=shopUi[currentLang],products=document.getElementById('products');modal.dataset.theme='shop';document.getElementById('collectionTitle').innerHTML='<span>'+ui.eyebrow+'</span>'+ui.title;document.getElementById('collectionIntro').textContent=ui.intro;products.className='products shop-catalog';products.innerHTML=shopProducts.map(function(item){var c=item[currentLang];return '<section class="shop-design"><figure class="shop-design-art"><img src="'+item.design+'" alt="'+ui.designAlt+' — '+c.name+'"><figcaption>'+c.tag+'</figcaption></figure><div class="shop-copy"><span class="shop-tag">'+c.tag+'</span><h3>'+c.name+'</h3><p class="shop-slogan">'+c.slogan+'</p><p class="shop-pitch">'+c.pitch+'</p><div class="shop-products">'+['tee','hoodie'].map(function(kind){var key=item.id+'_'+kind,front=kind==='tee'?'assets/logo-front-tee.webp':'assets/logo-front-hoodie.webp',back=kind==='tee'?item.backTee:item.backHoodie,title=kind==='tee'?ui.tee:ui.hoodie,links=STRIPE_LINKS[key]||{standard:'',custom:''};return '<article class="shop-product" id="shop-'+key+'" tabindex="-1"><figure class="shop-visual"><img src="'+front+'" alt="'+ui.frontAlt+' — '+title+' — '+c.name+'"><div class="view-tabs" aria-label="'+title+'"><button class="view-btn" type="button" aria-pressed="true" data-src="'+front+'" data-alt="'+ui.frontAlt+'">'+ui.front+'</button><button class="view-btn" type="button" aria-pressed="false" data-src="'+back+'" data-alt="'+ui.backAlt+'">'+ui.back+'</button><button class="view-btn" type="button" aria-pressed="false" data-src="'+item.design+'" data-alt="'+ui.designAlt+'">'+ui.design+'</button></div></figure><h4>'+title+'</h4><span class="shop-price">'+ui.price+'</span><p class="shop-spec">'+ui.spec+'</p><p class="shop-custom">'+ui.custom+'</p><div class="shop-actions">'+shopAction(links.standard,ui.buy,ui.soon,ui.soon+' — '+title)+shopAction(links.custom,ui.buyCustom,ui.soon,ui.soon+' — '+title+' + '+ui.custom)+'</div></article>'}).join('')+'</div></div></section>'}).join('');products.querySelectorAll('.view-btn').forEach(function(btn){btn.addEventListener('click',function(){var figure=btn.closest('.shop-visual'),img=figure.querySelector('img');figure.querySelectorAll('.view-btn').forEach(function(b){b.setAttribute('aria-pressed',b===btn?'true':'false')});img.src=btn.dataset.src;img.alt=btn.dataset.alt+' — '+btn.closest('.shop-product').querySelector('h4').textContent+' — '+btn.closest('.shop-design').querySelector('h3').textContent})})}
+  function productById(id){for(var i=0;i<shopProducts.length;i++)if(shopProducts[i].id===id)return shopProducts[i];return null}
+  function veinProductLink(item,kind,ui,c){var key=item.id+'_'+kind,title=kind==='tee'?ui.tee:ui.hoodie,mockup=kind==='tee'?item.backTee:item.backHoodie;return '<a class="vein-product-link" href="#shop-'+key+'" data-shop-target="shop-'+key+'"><img src="'+mockup+'" alt="'+ui.backAlt+' — '+title+' — '+c.name+'"><span><strong>'+title+'</strong><small>'+ui.viewProduct+' →</small></span></a>'}
+  function showShopProduct(target){lastCollectionType='shop';renderShop();setNav('shop');requestAnimationFrame(function(){requestAnimationFrame(function(){var product=document.getElementById(target);if(!product)return;product.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'start'});product.focus({preventScroll:true});product.classList.remove('shop-arrival');void product.offsetWidth;product.classList.add('shop-arrival')})})}
+  function renderCollection(type){lastCollectionType=type;if(type==='shop'){renderShop();return}var d=collectionCopy[currentLang][type],ui=shopUi[currentLang],products=document.getElementById('products');modal.dataset.theme=type;document.getElementById('collectionTitle').innerHTML='<span>'+tr('unlocked')+'</span>'+d.title;document.getElementById('collectionIntro').textContent=d.intro;products.className='products vein-products';products.innerHTML=d.productIds.map(function(id){var item=productById(id);if(!item)return '';var c=item[currentLang];return '<article class="vein-design"><figure class="vein-art"><img src="'+item.design+'" alt="'+ui.designAlt+' — '+c.name+'"><figcaption>'+c.tag+'</figcaption></figure><div class="vein-copy"><h3>'+c.name+'</h3><p class="vein-slogan">'+c.slogan+'</p><p class="vein-pitch">'+c.pitch+'</p><div class="vein-links">'+veinProductLink(item,'tee',ui,c)+veinProductLink(item,'hoodie',ui,c)+'</div></div></article>'}).join('');products.querySelectorAll('.vein-product-link').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();showShopProduct(link.dataset.shopTarget)})})}
+  function openCollection(type){playReveal();renderCollection(type);setNav(type);mineUi.setAttribute('inert','');modal.removeAttribute('inert');modal.classList.add('open');closeBtn.focus()}
+  function particles(el,type){var r=el.getBoundingClientRect();for(var i=0;i<12;i++){var p=document.createElement('i');p.className='dust';p.style.left=(r.left+r.width/2)+'px';p.style.top=(r.top+r.height/2)+'px';p.style.background=palette[type];p.style.setProperty('--dx',rand(-95,95)+'px');p.style.setProperty('--dy',rand(-80,60)+'px');document.body.appendChild(p);setTimeout(function(n){n.remove()},720,p)}}
+  function advance(reason,openedType,committed,token){token=token==null?navToken:token;if(token!==navToken||(advancing&&!committed)||scene!=='mine')return;advancing=true;playScoop();var old=activeOre();old.classList.remove('active');old.classList.add('departing');scoopRunner.classList.remove('roll');void scoopRunner.offsetWidth;scoopRunner.classList.add('roll');message.innerHTML=reason==='unlock'?tr('opened'):tr('moving');instruction.textContent=reason==='unlock'?tr('collectionUnlocked'):tr('timeElapsed');setTimeout(function(){if(token!==navToken||scene!=='mine')return;setActive(activeIndex+1,false);scoopRunner.classList.remove('roll');if(openedType)setTimeout(function(){if(token===navToken&&scene==='mine')openCollection(openedType)},120)},720)}
+  function hit(el){if(advancing||el!==activeOre())return;var type=el.dataset.type,token=navToken;hits++;playDrill();jackleg.classList.remove('drilling');el.classList.remove('hitting');void jackleg.offsetWidth;jackleg.classList.add('drilling');setTimeout(function(){if(token!==navToken||scene!=='mine')return;el.classList.add('hitting');flash.classList.remove('on');void flash.offsetWidth;flash.classList.add('on');particles(el,type)},270);if(hits===1){message.innerHTML=tr('resists');instruction.textContent=tr('again2')}else if(hits===2){message.innerHTML=tr('insist');instruction.textContent=tr('again1')}else{advancing=true;timerLabel.textContent=tr('unlocked');timerFill.style.transform='scaleX(0)';setTimeout(function(){advance('unlock',type,true,token)},650)}setTimeout(function(){el.classList.remove('hitting')},760)}
+  function animate(now){if(scene==='surface'){if(!reduceMotion)draw(now)}else{var depth=280+Math.floor(Math.max(0,now-mineStarted)/1250);if(depthEl.dataset.value!==String(depth)){depthEl.dataset.value=String(depth);depthEl.textContent='− '+depth+' M';depthEl.classList.add('tick');setTimeout(function(){depthEl.classList.remove('tick')},240)}if(!modal.classList.contains('open')){if(!reduceMotion){motion=(now*.00011)%1;draw(now)}if(!advancing){var elapsed=Math.max(0,now-cycleStarted),remaining=Math.max(0,10000-elapsed);timerFill.style.transform='scaleX('+(remaining/10000)+')';timerLabel.textContent=named(tr('nextOre'),{n:Math.max(0,Math.ceil(remaining/1000))});if(remaining<=0)advance('timer')}}}requestAnimationFrame(animate)}
+  enter.addEventListener('click',function(){playDescent();startMusic();navToken++;enterMine()});
+  back.addEventListener('click',surface);
+  ores.forEach(function(el){el.addEventListener('click',function(){hit(el)})});
+  document.querySelectorAll('.section-nav button[data-jump]').forEach(function(btn){btn.addEventListener('click',function(){var type=btn.dataset.jump;if(type!=='surface')playUi();navToken++;advancing=false;if(jumpTimer)clearTimeout(jumpTimer);jumpTimer=null;jumpTarget=type;if(type==='surface'){surface();return}if(scene!=='mine'){playDescent();startMusic();enterMine(type);var token=navToken;jumpTimer=setTimeout(function(){if(token===navToken&&scene==='mine'&&jumpTarget===type){openCollection(type);jumpTimer=null}},760)}else{openCollection(type)}})});
+  langToggle.addEventListener('click',function(){playUi();currentLang=currentLang==='fr'?'en':'fr';applyLanguage()});
+  soundToggle.addEventListener('click',function(){if(soundEnabled){playUi();soundEnabled=false;stopEngine()}else{soundEnabled=true;playReveal();if(scene==='mine')startEngine()}applyLanguage()});
+  musicToggle.addEventListener('click',function(){if(musicEnabled){musicEnabled=false;stopMusic()}else{musicEnabled=true;startMusic()}applyLanguage()});
+  trackPlayPause.addEventListener('click',function(){if(musicEnabled&&musicStarted){musicEnabled=false;stopMusic()}else{musicEnabled=true;startMusic()}applyLanguage()});
+  closeBtn.addEventListener('click',function(){playUi();modal.classList.remove('open');modal.setAttribute('inert','');mineUi.removeAttribute('inert');cycleStarted=performance.now();setNav(activeOre().dataset.type);activeOre().focus()});modal.addEventListener('click',function(e){if(e.target===modal)closeBtn.click()});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeBtn.click()});
+  addEventListener('resize',size);applyLanguage();size();requestAnimationFrame(animate);
+})();
+</script>
+</body>
+</html>

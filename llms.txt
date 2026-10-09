@@ -1,0 +1,55 @@
+# Diamonds Drill Clothing
+
+> Expérience minière — Quebec-inspired mining streetwear from the drift.
+
+Diamonds Drill Clothing is a workwear-inspired streetwear brand rooted in
+Quebec mining culture, built by and for the underground crew. The tagline on
+the site is in Quebec French: « Expérience minière » — the site opens with a
+"Descendre dans la mine" button and drops the visitor into a full-screen
+canvas mining experience before reaching the shop.
+
+Our signature slogan is « Quand elle résiste, nous on insiste ! » —
+"When it resists, we insist!" It is not a slogan, it is a full work shift
+(c'est pas un slogan, c'est un quart de travail). The brand speaks to drillers,
+muckers and the whole underground gang (toute la gang du fond).
+
+## Collection
+
+Five designs, each with its own story, cut as black T-shirt or black hoodie:
+
+- **Diamonds Drill — Flagship** — « Quand elle résiste, nous on insiste ! » /
+  "When it resists, we insist!" The brand manifesto. For those who actually
+  know the rock. Not a slogan — a full work shift. For drillers, muckers,
+  the whole underground crew.
+- **Muckeurs — Rose** (Muckers — Pink) — for the women of the underground,
+  running the scoop on 12-hour shifts. Pink is not a concession, it's a
+  flag.
+- **Muckeurs — Jaune** (Muckers — Yellow) — for the mucking crew: cleaning
+  the face, loading, moving the mine forward one bucket at a time.
+- **Conventional Mining** — the conventional cycle spelled out: muck,
+  drill, blast — repeat. Trade pride for the jackleg and drift crews.
+- **Surface Drilling** (FR name on site: Forage de surface) — surface
+  diamond drilling: the drill rig, the crew, the terrain.
+
+## Shop
+
+- Five designs × two cuts, always black: T-shirt noir and Hoodie noir.
+- Product format, always: small logo on the heart side in front, medium
+  visual on the back — toujours.
+- Personalization: your name on the heart side, +8 CAD.
+- Prices: coming soon (bientôt disponible).
+- Payment: Stripe checkout will be activated once the client's Stripe
+  account is open.
+
+## Interactive Experience
+
+The site homepage is an interactive mine experience rendered on a full-screen
+HTML canvas (game-style). Visitors press "Descendre dans la mine" (descend
+into the mine), drill into ore veins (quartz, diamond, gold) and unlock the
+collections — a section is called « Filon débloqué — Collection Foreur ».
+The experience copy on the site is in Quebec French.
+
+## Contact
+
+- Email: [EMAIL]
+- Phone: [PHONE]

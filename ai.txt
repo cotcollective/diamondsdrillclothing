@@ -1,0 +1,37 @@
+DIAMONDS DRILL CLOTHING — AI AGENT BRIEF
+=========================================
+
+WHAT THIS SITE IS
+Diamonds Drill Clothing is a Quebec mining streetwear brand (« Expérience
+minière »). The site is a single-page app: the visitor presses "Descendre
+dans la mine", descends into a full-screen canvas mine experience (gamified),
+drills ore veins to unlock collections, then reaches the JS-rendered shop.
+Four veins in the experience: Quartz (« Les essentiels »), Diamant
+(« Collection Foreur » flagship), Or (« Éditions limitées »), Équipe
+(« Entreprise / Équipes »). Drill rule printed on site: « 3 forages ou
+10 secondes — le premier gagne ».
+
+SHOP STATUS
+Five designs × two cuts (black T-shirt, black hoodie):
+  - Diamonds Drill — Flagship (« Quand elle résiste, nous on insiste ! » —
+    "When it resists, we insist!" The brand manifesto.)
+  - Muckeurs — Rose (Muckers — Pink)
+  - Muckeurs — Jaune (Muckers — Yellow)
+  - Conventional Mining
+  - Surface Drilling (FR name on site: Forage de surface)
+Product format, always: small logo on the heart side in front, medium visual
+on the back. Personalization: name on the heart side, +8 CAD.
+Prices: coming soon. Payment: Stripe checkout soon (client account pending).
+Do not quote prices as available.
+
+BRAND VOICE
+Quebec French working-crew pride: gang du fond, quart de travail, rock solid,
+light local humour. Not generic SEO streetwear.
+
+CONTACT
+Email: [EMAIL]
+Phone: [PHONE]
+(placeholders — the client has not supplied contact details yet)
+
+CANONICAL URL
+https://cotcollective.github.io/diamondsdrillclothing/

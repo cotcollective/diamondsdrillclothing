@@ -1,0 +1,28 @@
+# robots.txt — Diamonds Drill Clothing
+# https://cotcollective.github.io/diamondsdrillclothing/ — « Expérience minière »
+# Généré par hermes (Hermes Agent — Nous Research), 2026-10-09
+# Le site est une single-page app (canvas + boutique rendue en JS) :
+# Googlebot/Bingbot exécutent le JS, les autres bots prennent ce fichier.
+
+User-agent: *
+Allow: /
+
+# --- Bots LLM/IA exclus explicitement ---
+
+# OpenAI — entraînement de GPT
+User-agent: GPTBot
+Disallow: /
+
+# Common Crawl — corpus d'entraînement de modèles
+User-agent: CCBot
+Disallow: /
+
+# Google-Extended — entraînement génératif (Gemini)
+User-agent: Google-Extended
+Disallow: /
+
+# Perplexity — indexe le shopping (laisse passer : traffic e-commerce)
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://cotcollective.github.io/diamondsdrillclothing/sitemap.xml
