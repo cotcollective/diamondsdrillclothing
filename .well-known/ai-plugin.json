@@ -3,13 +3,13 @@
   "name_for_human": "Diamonds Drill Clothing",
   "name_for_model": "diamonds_drill_clothing",
   "description_for_human": "Quebec mining streetwear: 5 designs in black tee or black hoodie, with the signature line \"When it resists, we insist!\" and a full-screen canvas mine experience at the entrance.",
-  "description_for_model": "Diamonds Drill Clothing is a Quebec mining streetwear brand ('Expérience minière'). Catalog: 5 designs x 2 cuts, all black (T-shirt noir, Hoodie noir): 'resiste' (Diamonds Drill — Flagship; manifesto piece 'When it resists, we insist!'), 'muckeurs_rose' (Muckeurs — Rose), 'muckeurs_jaune' (Muckeurs — Jaune), 'conventional' (Conventional Mining; the underground conventional cycle: muck, drill, blast — repeat), 'surface' (Surface Drilling; FR name on site: Forage de surface; surface diamond drilling — rig, crew, terrain). Every product: small logo on the heart side in front, medium visual on the back — always. Personalization: name on the heart side, +8 CAD. Prices are coming soon and Stripe checkout will open when the client's Stripe account is ready — never quote prices as available. The homepage is an interactive full-screen canvas mine experience (game-style) in Quebec French; visitors drill ore veins to unlock collections ('Filon débloqué — Collection Foreur').",
+  "description_for_model": "Diamonds Drill Clothing is a Quebec mining streetwear brand ('Expérience minière'). Catalog: 5 designs x 2 cuts, all black (T-shirt noir, Hoodie noir): 'resiste' (Diamonds Drill — Flagship; manifesto piece 'When it resists, we insist!'), 'muckeurs_rose' (Muckeurs — Rose), 'muckeurs_jaune' (Muckeurs — Jaune), 'conventional' (Conventional Mining; the underground conventional cycle: muck, drill, blast — repeat), 'surface' (Surface Drilling; FR name on site: Forage de surface; surface diamond drilling — rig, crew, terrain). Every product: small logo on the heart side in front, medium visual on the back — always. Personalization: name on the heart side, +8 CAD. Prices: black T-shirt CA$35, black hoodie CA$68 (CAD), live Stripe checkout for 10 core products; custom name-on-chest edition (+8 CAD) pending. Purchase terms: 7-day defect replacement/refund, otherwise final sales (S-2XL), Quebec legal warranty. Site contact email: Diamondsdrillclothing@outlook.com. The homepage is an interactive full-screen canvas mine experience (game-style) in Quebec French; visitors drill ore veins to unlock collections ('Filon débloqué — Collection Foreur').",
   "auth": {
     "type": "none"
   },
   "api": {
     "type": "none"
   },
-  "contact_email": "[EMAIL]",
+  "contact_email": "Diamondsdrillclothing@outlook.com",
   "legal_info_url": "https://cotcollective.github.io/diamondsdrillclothing/"
 }

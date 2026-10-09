@@ -30,6 +30,11 @@ Five designs, each with its own story, cut as black T-shirt or black hoodie:
   drill, blast — repeat. Trade pride for the jackleg and drift crews.
 - **Surface Drilling** (FR name on site: Forage de surface) — surface
   diamond drilling: the drill rig, the crew, the terrain.
+- **Diamond Bit — French Edition** (FR: Trépan diamant — FR) — gold-accented
+  edition for drillers: "a good hole is earned inch by inch". Live on FR
+  site with Stripe checkout (tee/hoodie).
+- **Diamond Bit — EN** (FR: Trépan diamant — EN) — "We drill. We break.
+  We deliver!" — English edition, coming soon.
 
 ## Shop
 
@@ -38,8 +43,12 @@ Five designs, each with its own story, cut as black T-shirt or black hoodie:
   visual on the back — toujours.
 - Personalization: your name on the heart side, +8 CAD.
 - Prices: coming soon (bientôt disponible).
-- Payment: Stripe checkout will be activated once the client's Stripe
-  account is open.
+- Payment: live Stripe checkout (10 standard buy links). Custom
+  name-on-chest (+8 CAD) links pending.
+- Purchase terms: CAD prices, shipping extra, 7-day replacement/refund on
+  manufacturing defects, otherwise final sales (sizes S-2XL), refunds via
+  Stripe in 5-10 business days. Quebec legal warranty applies.
+- Contact email: Diamondsdrillclothing@outlook.com
 
 ## Interactive Experience
 
