@@ -45,8 +45,10 @@ Five designs, each with its own story, cut as black T-shirt or black hoodie:
 
 The site homepage is an interactive mine experience rendered on a full-screen
 HTML canvas (game-style). Visitors press "Descendre dans la mine" (descend
-into the mine), drill into ore veins (quartz, diamond, gold) and unlock the
-collections — a section is called « Filon débloqué — Collection Foreur ».
+into the mine) and drill four ore veins — Quartz (Les essentiels), Diamant
+(Collection Foreur, flagship), Or (Éditions limitées), Équipe (Entreprise /
+Équipes) — each unlocked vein opens a collection (« Filon débloqué »).
+Drill rule: « 3 forages ou 10 secondes — le premier gagne ».
 The experience copy on the site is in Quebec French.
 
 ## Contact
